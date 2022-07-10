@@ -6,6 +6,7 @@ import   "./Banner.css";
 
 function Banner() {
 const [movies, setMovies] = useState([])
+const [description, setDescription] = useState(false)
 useEffect(() => {
     async function fetchData () {
         const request = await instance.get(requests.fetchComedyMovies)
@@ -22,6 +23,11 @@ useEffect(() => {
 function truncate(str,n) {
   return str?.length>n ?str.substr(0,n-1)+".....":str
 }
+function moreInfo() {
+  setDescription(!description)
+  
+}
+
 
   return (
     <header
@@ -41,14 +47,15 @@ function truncate(str,n) {
 </div>
       <div className='banner_buttons'>
 
-        <button className="banner_button">Play</button>
-        <button className="banner_button">More Info</button>
+        <button className="button">Play</button>
+        <button className="button " onClick={moreInfo} >More Info</button>
 
       </div>
+      {description&&
       <h1 className='banner_description'>
         {truncate(movies.overview,150)}
       </h1>
-
+}
     </div>
 
 

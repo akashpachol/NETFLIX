@@ -10,9 +10,7 @@
     transition-timing-function: ease-in;
     transition: all 0.5s;
 }
-.nav-black{
-    background-color: black;
-}
+
 
 .nav_logo{
 
@@ -22,10 +20,36 @@
     width: 80px;
     cursor: pointer;
 }
+.nav_part{
+    margin-top: 0.8rem;
+    margin-left: 9rem;
+    display: flex;
+    justify-content: space-between;
+  
+}
+a{
+    padding-left: 1rem;
+}
+.nav_link{
+    text-decoration: none;
+    font-weight:900;
+    color: aliceblue;
+    font-size: 20px;
+}
+.nav-black{
+    background-color: black;
+}
 .nav_avatar{
     position: fixed;
     right: 20px;
     object-fit: contain;
     width: 40px;
     cursor: pointer;
+}
+.loginPage{
+    margin-top:15px;
+margin-right: 10rem;
+    right: 70px;
+    object-fit: contain;
+    
 }
